@@ -68,14 +68,14 @@
         "prefix": "create",
         "body": [
             "def create",
-            "\t@${1:model_class_name} = ${2:ModelClassName}.new($1_params)",
-            "\trespond_to do |format|",
-            "\t\tif @$1.save",
-            "\t\t\tformat.html { redirect_to @$1, notice: '$2 created' }",
-            "\t\telse",
-            "\t\t\tformat.html { render :new, status: :unprocessable_entity }",
-            "\t\tend",
-            "\tend",
+            "  @${1:model_class_name} = ${2:ModelClassName}.new($1_params)",
+            "  respond_to do |format|",
+            "    if @$1.save",
+            "      format.html { redirect_to @$1, notice: \"$2 created\" }",
+            "    else",
+            "      format.html { render :new, status: :unprocessable_entity }",
+            "    end",
+            "  end",
             "end"
         ],
         "description": "def create"
@@ -84,9 +84,9 @@
         "prefix": "destroy",
         "body": [
             "def destroy",
-            "\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
-            "\t@$1.destroy!",
-            "\tredirect_to $1s_path, notice: '$2 removed'",
+            "  @${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
+            "  @$1.destroy!",
+            "  redirect_to $1s_path, notice: \"$2 removed\"",
             "end"
         ],
         "description": "def destroy"
@@ -95,7 +95,7 @@
         "prefix": "edit",
         "body": [
             "def edit",
-            "\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
+            "  @${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
             "end"
         ],
         "description": "def edit"
@@ -104,7 +104,7 @@
         "prefix": "index",
         "body": [
             "def index",
-            "\t@${1:model_class_name} = ${2:ModelClassName}.all",
+            "  @${1:model_class_name} = ${2:ModelClassName}.all",
             "end"
         ],
         "description": "def index"
@@ -113,7 +113,7 @@
         "prefix": "new",
         "body": [
             "def new",
-            "\t@${1:model_class_name} = ${2:ModelClassName}.new",
+            "  @${1:model_class_name} = ${2:ModelClassName}.new",
             "end"
         ],
         "description": "def new"
@@ -122,7 +122,7 @@
         "prefix": "show",
         "body": [
             "def show",
-            "\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
+            "  @${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
             "end"
         ],
         "description": "def show"
@@ -131,14 +131,14 @@
         "prefix": "update",
         "body": [
             "def update",
-            "\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
-            "\trespond_to do |format|",
-            "\t\tif @$1.update($1_params)",
-            "\t\t\tformat.html { redirect_to @$1, notice: '$2 updated' }",
-            "\t\telse",
-            "\t\t\tformat.html { render :edit, status: :unprocessable_entity }",
-            "\t\tend",
-            "\tend",
+            "  @${1:model_class_name} = ${2:ModelClassName}.find(params[:id])",
+            "  respond_to do |format|",
+            "    if @$1.update($1_params)",
+            "      format.html { redirect_to @$1, notice: \"$2 updated\" }",
+            "    else",
+            "      format.html { render :edit, status: :unprocessable_entity }",
+            "    end",
+            "  end",
             "end"
         ],
         "description": "def update"
@@ -147,7 +147,7 @@
         "prefix": "params",
         "body": [
             "def ${1:model_class_name}_params",
-            "\tparams.require(:$1).permit(${2:attributes})",
+            "  params.require(:$1).permit(${2:attributes})",
             "end"
         ],
         "description": "def model_params"
