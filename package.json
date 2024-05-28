@@ -85,6 +85,10 @@
                 "path": "./snippets/nix.json"
             },
             {
+                "language": "kivy",
+                "path": "./snippets/kivy.json"
+            },
+            {
                 "language": "liquid",
                 "path": "./snippets/liquid.json"
             },
@@ -555,6 +559,22 @@
             {
                 "language": "purescript",
                 "path": "./snippets/purescript.json"
+            },
+            {
+                "language": "gleam",
+                "path": "./snippets/gleam.json"
+            },
+            {
+                "language": "asciidoc",
+                "path": "./snippets/asciidoc.json"
+            },
+            {
+                "language": "beancount",
+                "path": "./snippets/beancount.json"
+            },
+            {
+                 "language": "rst",
+                 "path": "./snippets/rst.json"
             }
         ]
     }
